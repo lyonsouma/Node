@@ -1,5 +1,7 @@
 const fs = require ('fs');
 
+// READ FILES
+/*
 fs.readFile('./Test1.txt', (err, data) =>{
 
     if(err){
@@ -8,3 +10,10 @@ fs.readFile('./Test1.txt', (err, data) =>{
     console.log(data.toString())
 });
 console.log('Cool')
+*/
+
+//WRITE FILES
+
+fs.writeFile('./Test.txt', 'Write Hello', ()=>{
+    console.log('File was written')
+});

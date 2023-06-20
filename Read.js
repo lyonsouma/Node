@@ -13,7 +13,30 @@ console.log('Cool')
 */
 
 //WRITE FILES
-
+/*
 fs.writeFile('./Test.txt', 'Write Hello', ()=>{
     console.log('File was written')
 });
+*/
+
+// Directories
+
+if(!fs.existsSync('./Assets')){
+
+    fs.mkdir('./Assets',(err)=>{
+        if(err){
+            console.log(err)
+        }
+        console.log('Directory created');
+    })
+
+}
+else{
+    fs.rmdir('./Assets',(err)=>{
+        if(err){
+            console.log(err)
+        }
+        console.log('Folder Removed')
+    })
+}
+
